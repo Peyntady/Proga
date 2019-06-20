@@ -1,0 +1,26 @@
+number_coins_of_50 = 1
+number_coins_of_10 = 2
+number_coins_of_5 = 3
+number_coins_of_1 = 4
+change = int(input("Введите количество копеек, которое вам надо получить"))
+coins = 0
+
+def change_balance_and_coins_added(x):
+    coins += 1
+    change -= x
+
+def change_cout(change):
+    if number_coins_of_50 > 0 and change - 50 > 0:
+         change_balance_and_coins_added(50)
+    elif  number_coins_of_10 > 0 and change - 10 > 0:
+        change_balance_and_coins_added(10)
+    elif number_coins_of_5 > 0 and change - 5 > 0:
+        change_balance_and_coins_added(5)
+    elif number_coins_of_1 > 0 and change - 1 > 0:
+        change_balance_and_coins_added(1)
+    return сoins
+
+if 0 < change < 100:
+    change_cout(change)
+else:
+    print("Сдачи нет")
