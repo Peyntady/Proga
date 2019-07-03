@@ -1,0 +1,7 @@
+text = ' абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+k = 13
+s = input('Введите слово: ')
+res = ''
+for c in s:
+    res += text[(text.index(c) + k) % len(text)]
+print('Результат шифровки: "' + res + '"')
